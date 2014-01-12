@@ -34,22 +34,25 @@ PImage pol;
 PImage val;
 PImage dr;
 PImage mej;
+int a, b;
+int inx;
+float cx,cy,cw,ch;
 
 void setup() {
   //  claire = new Player(color(0,0,255));
   //  lauren= new Player(color(255,0,0));
   //  sophie =new Player(color(0,255,0));
-  //  monroy = new Teacher(otherC,a,b,.1,inx);
-  //  buch = new Teacher(otherC,a,b,3,inx);
-  //  mosko = new Teacher(otherC,a,b,1,inx);
-  //  pants = new Teacher(otherC,a,b,1.2,inx);
-  //  mejia = new Teacher(otherC,a,b,.5,inx);
-  //  valley = new Teacher(otherC,a,b,2,inx);
-  //  liu = new Teacher(otherC,a,b,.5,inx);
-  //  pollo = new Teacher(otherC,a,b,2,inx);
-  //  pinto = new Teacher(otherC,a,b,.75,inx);
-  //  arnold = new Teacher(otherC,a,b,.4,inx);
-  //  sansy= new Teacher(otherC,a,b,4,inx);
+//  monroy = new Teacher(mon, a, b, .1, inx);
+//  buch = new Teacher(dr, a, b, 3, inx);
+//  mosko = new Teacher(mos, a, b, 1, inx);
+//  pants = new Teacher(pan, a, b, 1.2, inx);
+//  mejia = new Teacher(mej, a, b, .5, inx);
+//  valley = new Teacher(val, a, b, 2, inx);
+//  //  liu = new Teacher(otherC,a,b,.5,inx);
+//  pollo = new Teacher(pol, a, b, 2, inx);
+//  //  pinto = new Teacher(otherC,a,b,.75,inx);
+//  arnold = new Teacher(arn, a, b, .4, inx);
+//  sansy= new Teacher(san, a, b, 4, inx);
   //  gerstein = new Teacher(otherC,a,b,xSpeed,inx);
   //  ryan= new Teacher(otherC,a,b,xSpeed,inx);
   size(displayWidth, displayHeight);
@@ -105,8 +108,8 @@ void draw() {
 
 void strt() {
   //magnet hallway as bg
-  image(startHall,0,0,displayWidth,displayHeight);
-  fill(255,255,255,75);
+  image(startHall, 0, 0, displayWidth, displayHeight);
+  fill(255, 255, 255, 75);
   stroke(0, 0, 255);
   rectMode(CENTER);
   rect(rx, ry-disp, rw, rh);
@@ -114,7 +117,7 @@ void strt() {
   textAlign(CENTER, CENTER);
   textSize(35);
   text("Start", rx, ry-disp);
-  fill(255,255,255,75); //INSTRUCTIONS
+  fill(255, 255, 255, 75); //INSTRUCTIONS
   stroke(0, 0, 255);
   rectMode(CENTER);
   rect(rx, ry, rw, rh);
@@ -122,7 +125,7 @@ void strt() {
   textAlign(CENTER, CENTER);
   textSize(35);
   text("Instructions", rx, ry);
-  fill(255,255,255,75); //CREDITS
+  fill(255, 255, 255, 75); //CREDITS
   stroke(0, 0, 255);
   rectMode(CENTER);
   rect(rx, ry+disp, rw, rh);
@@ -135,9 +138,13 @@ void strt() {
 }
 
 void choose () {
-  image(startHall,0,0,displayWidth,displayHeight);
+  image(startHall, 0, 0, displayWidth, displayHeight);
+  fill(255, 255, 255, 75);
+  noStroke();
+  rect(rx, ry, displayWidth, displayHeight);
   textAlign(CENTER, CENTER);
   textSize(45);
+  fill(0, 0, 255);
   text("Choose a Player!", rx, ry-(disp*3.5));
   noFill();
   stroke(0, 0, 255);
@@ -148,23 +155,23 @@ void choose () {
 
 void secGame(Player p) {
   image(floor, 0, 0, displayWidth, displayHeight);
-//  rect(
- 
+  strokeWeight(5);
+  stroke(255);
 }
 
 void instruct () {
-  image(startHall,0,0,displayWidth,displayHeight);
+  image(startHall, 0, 0, displayWidth, displayHeight);
+  fill(255, 255, 255, 75);
+  noStroke();
+  rect(rx, ry, displayWidth, displayHeight);
   textSize(45);
   fill(0, 0, 255);
   text("~Instructions~", rx, ry-(disp*3.5));
   textSize(30);
-  fill(255,255,255,75);
-  noStroke();
-  rect(rx, ry, displayWidth-25, displayHeight-30);
   fill(0, 0, 255);
   text("You are a student at Magnet High School. You've been trapped in class for hours, and you can't \n take it anymore. You run out of class, and try to find your way out. However, on the way, you \n encounter several angry teachers. It is your job to dodge those teachers and make sure they \n don't catch you. If they do, you'll get a LOP. If you get three LOPs, your life (the game) is over. \n But the longer you are able to survive Magnet's hallways, the more miles you get. You need 200 \n miles to go down to the first floor. Collect little Stanko faces to earn bonus miles! Once you get \n to the first floor, beware of Sanservino and others. Try to get to the door and escape \n to the parking lot. Remember, if Mrs. Ryan catches you, you'll be expelled immediately! \n \n Good luck!", rx, ry+(disp/5));
-  fill(255,255,255,75);
-  stroke(0,0,255);
+  fill(255, 255, 255, 75);
+  stroke(0, 0, 255);
   rect(rx, ry+(disp*4), rw, rh);
   fill(0, 0, 255);
   textSize(35);
@@ -172,17 +179,17 @@ void instruct () {
 }
 
 void credit() {
-  image(startHall,0,0,displayWidth,displayHeight);
-  fill(0,0,255);
+  image(startHall, 0, 0, displayWidth, displayHeight);
+  fill(255, 255, 255, 75);
+  noStroke();
+  rect(rx, ry, displayWidth, displayHeight);
+  fill(0, 0, 255);
   textSize(45);
   text("~Credits~", rx, ry-(disp*3.5));
   textSize(30);
   text("Programmers: Claire Farrokh and Sophie Giuliani \n Quality Assurance Tester: Claire Farrokh \n User Interface Designer: Sophie Giuliani \n Graphics Designer: Lauren Broadwell \n Project Manager: Lauren Broadwell \n Created by The Beyonce Group \n Copyright 2014", rx, ry+(disp/5));
-  fill(255,255,255,75);
-  noStroke();
-  rect(rx, ry, displayWidth-25, displayHeight-30);
-  fill(255,255,255,75);
-  stroke(0,0,255);
+  fill(255, 255, 255, 75);
+  stroke(0, 0, 255);
   rect(rx, ry+(disp*4), rw, rh);
   fill(0, 0, 255);
   textSize(35);

@@ -3,7 +3,7 @@ class Teacher {
   color c;
   PVector loc;
 
-  Teacher (int a, int b) {
+  Teacher (PImage face, int a, int b,int xSpeed, int inx) {
     d = 20;
     loc = new PVector (a, b);
   }
@@ -19,7 +19,7 @@ class Teacher {
     }
   }
 
-  void patrol (int xSpeed, int inx) {
+  void patrol (int inx, int xSpeed) {
     loc.x+=xSpeed;
     if (loc.x+d/2 > width - 50 || loc.x-d/2 <50) {
       xSpeed=-xSpeed;
