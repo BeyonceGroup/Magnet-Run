@@ -25,6 +25,15 @@ boolean clair;
 boolean sophi;
 PImage floor;
 PImage startHall;
+PImage mon;
+PImage arn;
+PImage pan;
+PImage mos;
+PImage san;
+PImage pol;
+PImage val;
+PImage dr;
+PImage mej;
 
 void setup() {
   //  claire = new Player(color(0,0,255));
@@ -46,6 +55,15 @@ void setup() {
   size(displayWidth, displayHeight);
   floor = loadImage("floor.JPG");
   startHall = loadImage("start.JPG");
+  mon = loadImage("Monroy.JPG");
+  dr = loadImage("Dr. B.JPG");
+  mos = loadImage("Moskowitz.JPG");
+  pan = loadImage("Pantaleo.JPG");
+  mej = loadImage("Mejia.JPG");
+  val= loadImage("Valley.JPG");
+  pol= loadImage("Pollo.JPG");
+  arn = loadImage("Arnold.JPG");
+  san= loadImage("Sanservino.JPG");
   rx= width/2;
   ry=height/2;
   rw=225;
