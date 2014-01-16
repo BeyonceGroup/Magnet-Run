@@ -1,4 +1,3 @@
-
 void instruct () {
   image(startHall, 0, 0, displayWidth, displayHeight);
   fill(255, 255, 255, 75);

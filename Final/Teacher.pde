@@ -1,11 +1,10 @@
 class Teacher {
   int d;
-  color c;
   PVector loc;
   float xSpeed;
   float inx;
 
-  Teacher (PImage face, float a, float b,float xSpeed_) {
+  Teacher (PImage face, float a, float b, float xSpeed_) {
     d = 20;
     loc = new PVector (a, b);
     vhall=displayWidth/6;
@@ -14,7 +13,7 @@ class Teacher {
   }
 
   void show () {
-    fill (c);
+    fill (0);
     ellipse (loc.x, loc.y, d, d);
   }
 
@@ -24,9 +23,15 @@ class Teacher {
     }
   }
 
-  void patrol () {
+  void patrol_left () {
     loc.x-=xSpeed;
-    if (loc.x-d/2 <= 0 || loc.x+d/2 >= inx) {
+    if (loc.x <= 0 || loc.x >= inx) {
+      xSpeed=-xSpeed;
+    }
+  }
+  void patrol_right () {
+    loc.x+=xSpeed;
+    if (loc.x <= inx || loc.x >= displayWidth) {
       xSpeed=-xSpeed;
     }
   }
