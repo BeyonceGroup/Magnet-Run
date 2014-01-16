@@ -1,4 +1,4 @@
-void secGame(Player p) {
+void firGame(Player p) {
   image(floor, 0, 0, displayWidth, displayHeight);
   strokeWeight(5);
   stroke(255);
@@ -25,15 +25,16 @@ void secGame(Player p) {
   textSize(25);
   text("APA", sw/2, sh/2);
   text("AIT", displayWidth-sw/2, displayHeight-sh/2);
-  monroy.show();
-  monroy.patrol_left();
-  buch.show();
-  buch.patrol_left();
-  mosko.show();
-  mosko.patrol_right();
-  pants.show();
-  pants.patrol_right();
-  mejia.show();
-  mejia.patrol_mejia();
+  sansy.show();
+  sansy.patrol_left();
+  arnold.show();
+  arnold.patrol_left();
+  pinto.show();
+  pinto.patrol_left();
+  valley.show();
+  valley.patrol_right();
+  liu.show();
+  liu.patrol_right();
+  pollo.show();
+  pollo.patrol_right();
 }
-

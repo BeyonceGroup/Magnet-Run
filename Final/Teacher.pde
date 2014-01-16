@@ -35,5 +35,11 @@ class Teacher {
       xSpeed=-xSpeed;
     }
   }
+  void patrol_mejia () {
+    loc.y+=xSpeed;
+    if (loc.y <= 0 || loc.y >= hhall){
+      xSpeed=-xSpeed;
+    }
+  }
 }
 
