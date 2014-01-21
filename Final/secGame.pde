@@ -35,5 +35,17 @@ void secGame(Player p) {
   pants.patrol_right();
   mejia.show(mej);
   mejia.patrol_mejia();
+//  if(clair==true){
+//  claire.show(color(0, 0, 255));
+//  claire.walk();
+//  }
+//  if(sophi==true){
+//  sophie.show(color(0, 255, 0));
+//  sophie.walk();
+//  }
+//  if (laure==true) {
+//    lauren.show(color(255, 0, 0));
+//    lauren.walk();
+//  }
 }
 

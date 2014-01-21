@@ -45,18 +45,18 @@ int sw, sh;
 int h;
 
 void setup() {
-  //  claire = new Player(color(0,0,255));
-  //  lauren= new Player(color(255,0,0));
-  //  sophie =new Player(color(0,255,0));
+  claire = new Player(color(0,0,255));
+  lauren= new Player(color(255,0,0));
+  sophie =new Player(color(0,255,0));
   //  gerstein = new Teacher(ger,a,b,xSpeed);
   //  ryan= new Teacher(otherC,a,b,xSpeed,inx);
   size(displayWidth, displayHeight);
   floor = loadImage("floor.JPG");
   startHall = loadImage("start.JPG");
-  mon = loadImage("Monroy.JPG");
+  mon = loadImage("Monroy.png");
   dr = loadImage("DrB.png");
-  mos = loadImage("Moskowitz.JPG");
-  pan = loadImage("Pantaleo.JPG");
+  mos = loadImage("Moskowitz.png");
+  pan = loadImage("Pantaleo.png");
   mej = loadImage("Mejia.png");
   val= loadImage("Valley.png");
   pol= loadImage("Pollo.png");
@@ -76,10 +76,10 @@ void setup() {
   sw=100;
   sh=90;
   mejia = new Teacher(mej, rx+(vhall/2), 0, 5);
-  monroy = new Teacher(mon, rx-vhall, hhall*1.5, 2.5);
-  buch = new Teacher(dr, rx-vhall, hhall*2.5, 6);
-  mosko = new Teacher(mos, rx+vhall, hhall*1.5, 2.5);
-  pants = new Teacher(pan, rx+vhall, hhall*3.5, 3);
+  monroy = new Teacher(mon, rx-vhall, hhall*1.2, 2.5);
+  buch = new Teacher(dr, rx-vhall, hhall*2.2, 6);
+  mosko = new Teacher(mos, rx+vhall, hhall*1.2, 2.5);
+  pants = new Teacher(pan, rx+vhall, hhall*3.2, 3);
   sansy= new Teacher(san, rx-vhall, hhall*1.5, 4);
   arnold = new Teacher(arn, rx-vhall, hhall*2.5, 1);
   pinto = new Teacher(pin, rx-vhall, hhall*3.5, 4);
@@ -112,12 +112,18 @@ void draw() {
   }
   if (start==true && laure==true) {
     secGame(lauren);
+    lauren.show(color(255,0,0));
+    lauren.walk();
   }
   if (start==true && clair==true) {
     secGame(claire);
+    claire.show(color(0,0,255));
+    claire.walk();
   }
   if (start==true && sophi==true) {
     secGame(sophie);
+    sophie.show(color(0,255,0));
+    sophie.walk();
   }
 }
 

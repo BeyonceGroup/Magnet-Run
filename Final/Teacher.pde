@@ -24,19 +24,19 @@ class Teacher {
 
   void patrol_left () {
     loc.x-=xSpeed;
-    if (loc.x <= 0 || loc.x >= inx) {
+    if (loc.x <= 0-d/2 || loc.x >= inx) {
       xSpeed=-xSpeed;
     }
   }
   void patrol_right () {
     loc.x+=xSpeed;
-    if (loc.x <= inx || loc.x >= displayWidth) {
+    if (loc.x <= inx || loc.x >= displayWidth-d) {
       xSpeed=-xSpeed;
     }
   }
   void patrol_mejia () {
     loc.y+=xSpeed;
-    if (loc.y <= 0 || loc.y >= hhall-d/2){
+    if (loc.y <= 0 || loc.y >= hhall-d){
       xSpeed=-xSpeed;
     }
   }
