@@ -5,16 +5,15 @@ class Teacher {
   float inx;
 
   Teacher (PImage face, float a, float b, float xSpeed_) {
-    d = 20;
+    d = 100;
     loc = new PVector (a, b);
     vhall=displayWidth/6;
     xSpeed = xSpeed_;
     inx = a;
   }
 
-  void show () {
-    fill (0);
-    ellipse (loc.x, loc.y, d, d);
+  void show (PImage face) {
+    image(face, loc.x,loc.y,d,d);
   }
 
   void caught (Player p) {
@@ -37,7 +36,7 @@ class Teacher {
   }
   void patrol_mejia () {
     loc.y+=xSpeed;
-    if (loc.y <= 0 || loc.y >= hhall-10){
+    if (loc.y <= 0 || loc.y >= hhall-d/2){
       xSpeed=-xSpeed;
     }
   }

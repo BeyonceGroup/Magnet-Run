@@ -25,16 +25,16 @@ void firGame(Player p) {
   textSize(25);
   text("APA", sw/2, sh/2);
   text("AIT", displayWidth-sw/2, displayHeight-sh/2);
-  sansy.show();
+  sansy.show(san);
   sansy.patrol_left();
-  arnold.show();
+  arnold.show(arn);
   arnold.patrol_left();
-  pinto.show();
+  pinto.show(pin);
   pinto.patrol_left();
-  valley.show();
+  valley.show(val);
   valley.patrol_right();
-  liu.show();
+  liu.show(lu);
   liu.patrol_right();
-  pollo.show();
+  pollo.show(pol);
   pollo.patrol_right();
 }

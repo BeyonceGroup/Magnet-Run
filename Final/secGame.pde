@@ -25,15 +25,15 @@ void secGame(Player p) {
   textSize(25);
   text("APA", sw/2, sh/2);
   text("AIT", displayWidth-sw/2, displayHeight-sh/2);
-  monroy.show();
+  monroy.show(mon);
   monroy.patrol_left();
-  buch.show();
+  buch.show(dr);
   buch.patrol_left();
-  mosko.show();
+  mosko.show(mos);
   mosko.patrol_right();
-  pants.show();
+  pants.show(pan);
   pants.patrol_right();
-  mejia.show();
+  mejia.show(mej);
   mejia.patrol_mejia();
 }
 
