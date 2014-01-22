@@ -30,6 +30,7 @@ void strt() {
 }
 
 void choose () {
+  imageMode(CORNER);
   image(startHall, 0, 0, displayWidth, displayHeight);
   fill(255, 255, 255, 75);
   noStroke();
@@ -38,9 +39,13 @@ void choose () {
   textSize(45);
   fill(0, 0, 255);
   text("Choose a Player!", rx, ry-(disp*3.5));
-  noFill();
-  stroke(0, 0, 255);
-  rect(rx-(disp*2), ry, rw/2, rh); //image of lauren
-  rect(rx, ry, rw/2, rh); //image of claire
-  rect(rx+(disp*2), ry, rw/2, rh); //image of sophie
+  imageMode(CENTER);
+  image(jenn, rx-(disp*3), ry, i, i*1.5); //image of lauren
+  textSize(25);
+  fill(255);
+  text("Lauren",rx-(disp*3),ry+(i*.6));
+  image(watson, rx, ry, i,i*1.5); //image of claire
+  text("Claire",rx,ry+(i*.6));
+  image(lucy, rx+(disp*3), ry, i,i*1.5); //image of sophie
+  text("Sophie",rx+(disp*3),ry+(i*.6));
 }

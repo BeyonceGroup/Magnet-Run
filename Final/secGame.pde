@@ -1,7 +1,9 @@
 void secGame(Player p) {
+  imageMode(CORNER);
   image(floor, 0, 0, displayWidth, displayHeight);
   strokeWeight(5);
   stroke(255);
+  noFill();
   rect(rx, ry, displayWidth-(vhall*2), displayHeight-(hhall*2));
   line(rx, hhall, rx, displayHeight-hhall);
   line(vhall, hhall*2, displayWidth-vhall, hhall*2);

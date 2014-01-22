@@ -16,13 +16,13 @@ void mousePressed() {
   if (mouseX>rx-rw/2 && mouseX<rx+rw/2 && mouseY>ry-disp-rh/2 && mouseY<ry-disp+rh/2) {
     start=true;
   }
-  if (start==true && mouseX>rx-(disp*2)-rw/4 && mouseX<rx-(disp*2)+rw/4 &&  mouseY>ry-rh/2 && mouseY<ry+rh/2) {
+  if (start==true && mouseX>rx-(disp*3)-i/2 && mouseX<rx-(disp*3)+i/2 &&  mouseY>ry-(i*.75) && mouseY<ry+(i*.75)) {
     laure=true;
   }
-  if (start==true && mouseX>rx-rw/4 && mouseX<rx+rw/4 &&  mouseY>ry-rh/2 && mouseY<ry+rh/2) {
+  if (start==true && mouseX>rx-i/2 && mouseX<rx+i/2 &&  mouseY>ry-(i*.75) && mouseY<ry+(i*.75)) {
     clair=true;
   }
-  if (start==true && mouseX>rx+(disp*2)-rw/4 && mouseX<rx+(disp*2)+rw/4 &&  mouseY>ry-rh/2 && mouseY<ry+rh/2) {
+  if (start==true && mouseX>rx+(disp*3)-i/2 && mouseX<rx+(disp*3)+i/2 &&  mouseY>ry-(i*.75) && mouseY<ry+(i*.75)) {
     sophi=true;
   }
 }

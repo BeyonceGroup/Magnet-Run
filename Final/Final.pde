@@ -38,11 +38,15 @@ PImage pin;
 PImage lu;
 PImage ger;
 PImage mah;
+PImage lucy;
+PImage watson;
+PImage jenn;
 int a, b;
 float cx, cy, cw, ch;
 float vhall, hhall;
 int sw, sh;
 int h;
+int i;
 
 void setup() {
   claire = new Player(color(0,0,255));
@@ -53,6 +57,9 @@ void setup() {
   size(displayWidth, displayHeight);
   floor = loadImage("floor.JPG");
   startHall = loadImage("start.JPG");
+  jenn = loadImage("Jenn.jpg");
+  lucy= loadImage("Lucy.jpg");
+  watson = loadImage("Watson.jpg");
   mon = loadImage("Monroy.png");
   dr = loadImage("DrB.png");
   mos = loadImage("Moskowitz.png");
@@ -75,6 +82,7 @@ void setup() {
   vhall=displayWidth/6;
   sw=100;
   sh=90;
+  i=200;
   mejia = new Teacher(mej, rx+(vhall/2), 0, 5);
   monroy = new Teacher(mon, rx-vhall, hhall*1.2, 2.5);
   buch = new Teacher(dr, rx-vhall, hhall*2.2, 6);
