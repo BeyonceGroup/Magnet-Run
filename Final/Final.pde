@@ -17,6 +17,7 @@ Teacher ryan;
 int rx, ry, rw, rh;
 int disp;
 boolean instr;
+boolean choose;
 boolean back;
 boolean cred;
 boolean start;
@@ -102,6 +103,7 @@ void setup() {
   start=false;
   sophi=false;
   clair=false;
+  choose=false;
 }
 
 void draw() {
@@ -115,8 +117,9 @@ void draw() {
   if (instr==true) {
     instruct();
   }
-  if (start==true) {
+  if (choose==true) {
     choose();
+    start=true;
   }
   if (start==true && laure==true) {
     secGame(lauren);
@@ -136,6 +139,7 @@ void draw() {
 }
 
 void monroy() {
+  
 }
 
 void drb() {

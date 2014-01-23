@@ -14,7 +14,7 @@ void mousePressed() {
     cred=false;
   }
   if (mouseX>rx-rw/2 && mouseX<rx+rw/2 && mouseY>ry-disp-rh/2 && mouseY<ry-disp+rh/2) {
-    start=true;
+    choose=true;
   }
   if (start==true && mouseX>rx-(disp*3)-i/2 && mouseX<rx-(disp*3)+i/2 &&  mouseY>ry-(i*.75) && mouseY<ry+(i*.75)) {
     laure=true;
