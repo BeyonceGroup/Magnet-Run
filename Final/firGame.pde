@@ -16,12 +16,10 @@ void firGame(Player p) {
   rect(displayWidth-sw, 0, sw, sh); //stairs top right
   rect(0, displayHeight-sh, sw, sh); //stairs bottom left
   fill(0, 0, 255, 75);
-  rect(displayWidth-sw, displayHeight-sh, sw, sh); //ait  
   strokeWeight(1);
   fill(255);
   textSize(25);
-  text("APA", sw/2, sh/2);
-  text("AIT", displayWidth-sw/2, displayHeight-sh/2);
+  text("Exit", sw/2, sh/2);
   textSize (50);
   fill (360, 100, 100);
   text ("Miles: " + score, width/2, 40);

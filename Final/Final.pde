@@ -138,7 +138,7 @@ void draw() {
     if (score >= 20) {
       first = true;
     }
-    if (first == true && lauren.loc.x >= displayWidth-sw && lauren.loc.y <= sh) {
+    if (first == true && lauren.loc.x >= displayWidth-sw && lauren.loc.y <= sh || first == true && lauren.loc.x <= sw && lauren.loc.y >= displayHeight-sh) {
       play = true;
     }
     if (play == true){
@@ -162,7 +162,7 @@ void draw() {
     if (score >= 20) {
       first = true;
     }
-    if (first == true && claire.loc.x >= displayWidth-sw && claire.loc.y <= sh) {
+    if (first == true && claire.loc.x >= displayWidth-sw && claire.loc.y <= sh || first == true && claire.loc.x <= sw && claire.loc.y >= displayHeight-sh) {
       play = true;
     }
     if (play == true){
@@ -186,7 +186,7 @@ void draw() {
     if (score >= 20) {
       first = true;
     }
-    if (first == true && sophie.loc.x >= displayWidth-sw && sophie.loc.y <= sh) {
+    if (first == true && sophie.loc.x >= displayWidth-sw && sophie.loc.y <= sh || first == true && sophie.loc.x <= sw && sophie.loc.y >= displayHeight-sh) {
       play = true;
     }
     if (play == true) {
