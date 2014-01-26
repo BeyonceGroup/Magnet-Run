@@ -24,6 +24,7 @@ boolean start;
 boolean laure;
 boolean clair;
 boolean sophi;
+boolean first; // boolean for getting to the first floor... this is true when the score is 200
 PImage floor;
 PImage startHall;
 PImage mon;
@@ -106,6 +107,7 @@ void setup() {
   sophi=false;
   clair=false;
   choose=false;
+  first=false;
 }
 
 void draw() {
@@ -131,6 +133,9 @@ void draw() {
       score++;
       ancientT = millis();
     }
+    if (score >= 200){
+     first = true; 
+    }
   }
   if (start==true && clair==true) {
     secGame(claire);
@@ -140,6 +145,9 @@ void draw() {
       score++;
       ancientT = millis();
     }
+    if (score >= 200){
+     first = true; 
+    }
   }
   if (start==true && sophi==true) {
     secGame(sophie);
@@ -148,6 +156,9 @@ void draw() {
     if (millis()-ancientT > 1000) {
       score++;
       ancientT = millis();
+    }
+    if (score >= 200){
+     first = true; 
     }
   }
 }
