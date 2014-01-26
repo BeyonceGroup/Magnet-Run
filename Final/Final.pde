@@ -133,8 +133,11 @@ void draw() {
       score++;
       ancientT = millis();
     }
-    if (score >= 200){
-     first = true; 
+    if (score >= 200) {
+      first = true;
+    }
+    if (first == true && lauren.loc.x >= displayWidth-sw && lauren.loc.y <= sh) {
+      firGame(lauren);
     }
   }
   if (start==true && clair==true) {
@@ -145,8 +148,11 @@ void draw() {
       score++;
       ancientT = millis();
     }
-    if (score >= 200){
-     first = true; 
+    if (score >= 200) {
+      first = true;
+    }
+    if (first == true && claire.loc.x >= displayWidth-sw && claire.loc.y <= sh) {
+      firGame(claire);
     }
   }
   if (start==true && sophi==true) {
@@ -157,8 +163,11 @@ void draw() {
       score++;
       ancientT = millis();
     }
-    if (score >= 200){
-     first = true; 
+    if (score >= 200) {
+      first = true;
+    }
+    if (first == true && sophie.loc.x >= displayWidth-sw && sophie.loc.y <= sh) {
+      firGame(sophie);
     }
   }
 }
