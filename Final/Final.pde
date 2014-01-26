@@ -48,6 +48,7 @@ float vhall, hhall;
 int sw, sh;
 int h;
 int i;
+int score = 0;
 
 void setup() {
   claire = new Player(color(0,0,255));
