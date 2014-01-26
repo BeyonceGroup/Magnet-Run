@@ -1,31 +1,30 @@
 class Player {
   int d;
-  color c;
   PVector loc;
   
   Player (color otherC) {
     d = 20;
-    loc = new PVector (width-20, height-20);
+    loc = new PVector (displayWidth/4, displayHeight-(displayHeight/8));
   }
   
-  void show () {
-   fill (c);
+  void show (color otherC) {
+   fill (otherC);
    ellipse (loc.x, loc.y, d, d); 
   }
   
   void walk(){
     if (keyPressed && key == CODED){
       if(keyCode == LEFT){
-        loc.x--;
+        loc.x-=5;
       }
       if(keyCode == RIGHT){
-        loc.x++;
+        loc.x+=5;
       }
       if(keyCode == UP){
-        loc.y--;
+        loc.y-=5;
       }
       if(keyCode == DOWN){
-        loc.y++;
+        loc.y+=5;
       }
     }
   }
