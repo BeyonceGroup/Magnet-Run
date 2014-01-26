@@ -1,5 +1,4 @@
 void strt() {
-  //magnet hallway as bg
   image(startHall, 0, 0, displayWidth, displayHeight);
   fill(255, 255, 255, 75);
   stroke(0, 0, 255);

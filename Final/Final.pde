@@ -138,6 +138,12 @@ void draw() {
     }
     if (first == true && lauren.loc.x >= displayWidth-sw && lauren.loc.y <= sh) {
       firGame(lauren);
+      lauren.show(color(255, 0, 0));
+      lauren.walk();
+      if (millis() - ancientT > 1000) {
+        score++;
+        ancientT = millis();
+      }
     }
   }
   if (start==true && clair==true) {
@@ -153,6 +159,12 @@ void draw() {
     }
     if (first == true && claire.loc.x >= displayWidth-sw && claire.loc.y <= sh) {
       firGame(claire);
+      claire.show(color(0, 0, 255));
+      claire.walk();
+      if (millis() - ancientT > 1000) {
+        score++;
+        ancientT = millis();
+      }
     }
   }
   if (start==true && sophi==true) {
@@ -168,6 +180,12 @@ void draw() {
     }
     if (first == true && sophie.loc.x >= displayWidth-sw && sophie.loc.y <= sh) {
       firGame(sophie);
+      sophie.show(color(0, 255, 0));
+      sophie.walk();
+      if (millis() - ancientT > 1000) {
+        score++;
+        ancientT = millis();
+      }
     }
   }
 }
