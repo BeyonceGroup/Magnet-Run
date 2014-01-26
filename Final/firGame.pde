@@ -3,7 +3,6 @@ void firGame(Player p) {
   image(floor, 0, 0, displayWidth, displayHeight);
   rectMode(CENTER);
   strokeWeight(5);
-  
   rectMode(CORNER);
   colorMode(HSB, 360, 100, 100);
   fill(h, 100, 100, 75);
