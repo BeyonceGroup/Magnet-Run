@@ -15,16 +15,16 @@ class Player {
   void walk() {
     if (keyPressed && key == CODED) {
       if (keyCode == LEFT) {
-        loc.x-=5;
+        loc.x-=10;
       }
       if (keyCode == RIGHT) {
-        loc.x+=5;
+        loc.x+=10;
       }
       if (keyCode == UP) {
-        loc.y-=5;
+        loc.y-=10;
       }
       if (keyCode == DOWN) {
-        loc.y+=5;
+        loc.y+=10;
       }
     }
     if (loc.x <= displayWidth-vhall && loc.x >= vhall && loc.y <= displayHeight-hhall && loc.y >= hhall) {
