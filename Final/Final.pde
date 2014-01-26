@@ -163,7 +163,7 @@ void draw() {
       score++;
       ancientT = millis();
     }
-    if (score >= 20) {
+    if (score >= 200) {
       first = true;
     }
     if (first == true && sophie.loc.x >= displayWidth-sw && sophie.loc.y <= sh) {
