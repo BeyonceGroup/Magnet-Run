@@ -25,6 +25,7 @@ boolean laure;
 boolean clair;
 boolean sophi;
 boolean first; // boolean for getting to the first floor... this is true when the score is 200
+boolean winning; // gets you to the win screen without having to worry about moving out of the rectangle that is APA... I think
 boolean play;
 PImage floor;
 PImage startHall;
@@ -110,6 +111,7 @@ void setup() {
   choose=false;
   first=false;
   play=false;
+  winning=false;
 }
 
 void draw() {
@@ -141,13 +143,19 @@ void draw() {
     if (first == true && lauren.loc.x >= displayWidth-sw && lauren.loc.y <= sh || first == true && lauren.loc.x <= sw && lauren.loc.y >= displayHeight-sh) {
       play = true;
     }
-    if (play == true){
+    if (play == true) {
       firGame(lauren);
       lauren.show(color(255, 0, 0));
       lauren.walk();
       if (millis() - ancientT > 1000) {
         score++;
         ancientT = millis();
+      }
+      if (score >= 40 && lauren.loc.x <= sw && lauren.loc.y <= sh) {
+        winning = true;
+      }
+      if (winning == true) {
+        win();
       }
     }
   }
@@ -165,13 +173,19 @@ void draw() {
     if (first == true && claire.loc.x >= displayWidth-sw && claire.loc.y <= sh || first == true && claire.loc.x <= sw && claire.loc.y >= displayHeight-sh) {
       play = true;
     }
-    if (play == true){
+    if (play == true) {
       firGame(claire);
       claire.show(color(0, 0, 255));
       claire.walk();
       if (millis() - ancientT > 1000) {
         score++;
         ancientT = millis();
+      }
+      if (score >= 40 && claire.loc.x <= sw && claire.loc.y <= sh) {
+        winning = true;
+      }
+      if (winning == true) {
+        win();
       }
     }
   }
@@ -196,6 +210,12 @@ void draw() {
       if (millis() - ancientT > 1000) {
         score++;
         ancientT = millis();
+      }
+      if (score >= 40 && sophie.loc.x <= sw && sophie.loc.y <= sh) {
+        winning = true;
+      }
+      if (winning == true) {
+        win();
       }
     }
   }
