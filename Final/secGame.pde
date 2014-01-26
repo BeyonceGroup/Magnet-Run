@@ -29,7 +29,7 @@ void secGame(Player p) {
   text("AIT", displayWidth-sw/2, displayHeight-sh/2);
   textSize (50);
   fill (360, 100, 100);
-  text ("Miles: " + score, width/2, 10);
+  text ("Miles: " + score, width/2, 40);
   monroy.show(mon);
   monroy.patrol_left();
   buch.show(dr);

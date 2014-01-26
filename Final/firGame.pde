@@ -30,7 +30,7 @@ void firGame(Player p) {
   text("AIT", displayWidth-sw/2, displayHeight-sh/2);
   textSize (50);
   fill (360, 100, 100);
-  text ("Miles: " + score, width/2, 10);
+  text ("Miles: " + score, width/2, 40);
   sansy.show(san);
   sansy.patrol_left();
   arnold.show(arn);

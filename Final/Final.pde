@@ -25,6 +25,7 @@ boolean laure;
 boolean clair;
 boolean sophi;
 boolean first; // boolean for getting to the first floor... this is true when the score is 200
+boolean play;
 PImage floor;
 PImage startHall;
 PImage mon;
@@ -175,10 +176,13 @@ void draw() {
       score++;
       ancientT = millis();
     }
-    if (score >= 200) {
+    if (score >= 20) {
       first = true;
     }
     if (first == true && sophie.loc.x >= displayWidth-sw && sophie.loc.y <= sh) {
+      play = true;
+    }
+    if (play == true) {
       firGame(sophie);
       sophie.show(color(0, 255, 0));
       sophie.walk();
