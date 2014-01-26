@@ -126,16 +126,19 @@ void draw() {
     secGame(lauren);
     lauren.show(color(255,0,0));
     lauren.walk();
+    score++;
   }
   if (start==true && clair==true) {
     secGame(claire);
     claire.show(color(0,0,255));
     claire.walk();
+    score++;
   }
   if (start==true && sophi==true) {
     secGame(sophie);
     sophie.show(color(0,255,0));
     sophie.walk();
+    score++;
   }
 }
 
