@@ -109,6 +109,7 @@ void setup() {
   clair=false;
   choose=false;
   first=false;
+  play=false;
 }
 
 void draw() {
@@ -134,7 +135,7 @@ void draw() {
       score++;
       ancientT = millis();
     }
-    if (score >= 200) {
+    if (score >= 20) {
       first = true;
     }
     if (first == true && lauren.loc.x >= displayWidth-sw && lauren.loc.y <= sh) {
@@ -158,7 +159,7 @@ void draw() {
       score++;
       ancientT = millis();
     }
-    if (score >= 200) {
+    if (score >= 20) {
       first = true;
     }
     if (first == true && claire.loc.x >= displayWidth-sw && claire.loc.y <= sh) {
