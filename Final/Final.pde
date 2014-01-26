@@ -92,12 +92,12 @@ void setup() {
   buch = new Teacher(dr, rx-vhall, hhall*2.2, 6);
   mosko = new Teacher(mos, rx+vhall, hhall*1.2, 2.5);
   pants = new Teacher(pan, rx+vhall, hhall*3.2, 3);
-  sansy= new Teacher(san, rx-vhall, hhall*1.5, 4);
-  arnold = new Teacher(arn, rx-vhall, hhall*2.5, 1);
-  pinto = new Teacher(pin, rx-vhall, hhall*3.5, 4);
-  valley = new Teacher(val, rx+vhall, hhall*1.5, 5);
-  liu = new Teacher(lu, rx+vhall, hhall*2.5, 2);
-  pollo = new Teacher(pol, rx+vhall, hhall*3.5, 4);
+  sansy= new Teacher(san, rx-vhall, hhall*1.2, 4);
+  arnold = new Teacher(arn, rx-vhall, hhall*2.2, 1);
+  pinto = new Teacher(pin, rx-vhall, hhall*3.2, 4);
+  valley = new Teacher(val, rx+vhall, hhall*1.2, 5);
+  liu = new Teacher(lu, rx+vhall, hhall*2.2, 2);
+  pollo = new Teacher(pol, rx+vhall, hhall*3.2, 4);
   h=0;
   instr = false;
   back = false;
@@ -163,7 +163,7 @@ void draw() {
       score++;
       ancientT = millis();
     }
-    if (score >= 200) {
+    if (score >= 20) {
       first = true;
     }
     if (first == true && sophie.loc.x >= displayWidth-sw && sophie.loc.y <= sh) {

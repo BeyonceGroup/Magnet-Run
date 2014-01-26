@@ -1,7 +1,10 @@
 void firGame(Player p) {
+  imageMode(CORNER);
   image(floor, 0, 0, displayWidth, displayHeight);
+  rectMode(CENTER);
   strokeWeight(5);
   stroke(255);
+  noFill();
   rect(rx, ry, displayWidth-(vhall*2), displayHeight-(hhall*2));
   line(rx, hhall, rx, displayHeight-hhall);
   line(vhall, hhall*2, displayWidth-vhall, hhall*2);
@@ -25,6 +28,9 @@ void firGame(Player p) {
   textSize(25);
   text("APA", sw/2, sh/2);
   text("AIT", displayWidth-sw/2, displayHeight-sh/2);
+  textSize (50);
+  fill (360, 100, 100);
+  text ("Miles: " + score, width/2, 10);
   sansy.show(san);
   sansy.patrol_left();
   arnold.show(arn);
@@ -38,3 +44,4 @@ void firGame(Player p) {
   pollo.show(pol);
   pollo.patrol_right();
 }
+
