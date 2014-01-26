@@ -49,11 +49,12 @@ int sw, sh;
 int h;
 int i;
 int score = 0;
+int ancientT = 0; 
 
 void setup() {
-  claire = new Player(color(0,0,255));
-  lauren= new Player(color(255,0,0));
-  sophie =new Player(color(0,255,0));
+  claire = new Player(color(0, 0, 255));
+  lauren= new Player(color(255, 0, 0));
+  sophie =new Player(color(0, 255, 0));
   //  gerstein = new Teacher(ger,a,b,xSpeed);
   //  ryan= new Teacher(otherC,a,b,xSpeed,inx);
   size(displayWidth, displayHeight);
@@ -124,26 +125,34 @@ void draw() {
   }
   if (start==true && laure==true) {
     secGame(lauren);
-    lauren.show(color(255,0,0));
+    lauren.show(color(255, 0, 0));
     lauren.walk();
-    score++;
+    if (millis() - ancientT > 1000) {
+      score++;
+      ancientT = millis();
+    }
   }
   if (start==true && clair==true) {
     secGame(claire);
-    claire.show(color(0,0,255));
+    claire.show(color(0, 0, 255));
     claire.walk();
-    score++;
+    if (millis()-ancientT > 1000) {
+      score++;
+      ancientT = millis();
+    }
   }
   if (start==true && sophi==true) {
     secGame(sophie);
-    sophie.show(color(0,255,0));
+    sophie.show(color(0, 255, 0));
     sophie.walk();
-    score++;
+    if (millis()-ancientT > 1000) {
+      score++;
+      ancientT = millis();
+    }
   }
 }
 
 void monroy() {
-  
 }
 
 void drb() {

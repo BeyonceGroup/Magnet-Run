@@ -27,6 +27,9 @@ void secGame(Player p) {
   textSize(25);
   text("APA", sw/2, sh/2);
   text("AIT", displayWidth-sw/2, displayHeight-sh/2);
+  textSize (50);
+  fill (360, 100, 100);
+  text ("Your score is: " + score, width/2, 10);
   monroy.show(mon);
   monroy.patrol_left();
   buch.show(dr);
@@ -37,17 +40,17 @@ void secGame(Player p) {
   pants.patrol_right();
   mejia.show(mej);
   mejia.patrol_mejia();
-//  if(clair==true){
-//  claire.show(color(0, 0, 255));
-//  claire.walk();
-//  }
-//  if(sophi==true){
-//  sophie.show(color(0, 255, 0));
-//  sophie.walk();
-//  }
-//  if (laure==true) {
-//    lauren.show(color(255, 0, 0));
-//    lauren.walk();
-//  }
+  //  if(clair==true){
+  //  claire.show(color(0, 0, 255));
+  //  claire.walk();
+  //  }
+  //  if(sophi==true){
+  //  sophie.show(color(0, 255, 0));
+  //  sophie.walk();
+  //  }
+  //  if (laure==true) {
+  //    lauren.show(color(255, 0, 0));
+  //    lauren.walk();
+  //  }
 }
 
