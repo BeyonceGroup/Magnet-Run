@@ -138,6 +138,9 @@ void draw() {
       first = true;
     }
     if (first == true && lauren.loc.x >= displayWidth-sw && lauren.loc.y <= sh) {
+      play = true;
+    }
+    if (play == true){
       firGame(lauren);
       lauren.show(color(255, 0, 0));
       lauren.walk();
@@ -159,6 +162,9 @@ void draw() {
       first = true;
     }
     if (first == true && claire.loc.x >= displayWidth-sw && claire.loc.y <= sh) {
+      play = true;
+    }
+    if (play == true){
       firGame(claire);
       claire.show(color(0, 0, 255));
       claire.walk();
