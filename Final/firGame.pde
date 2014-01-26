@@ -3,12 +3,7 @@ void firGame(Player p) {
   image(floor, 0, 0, displayWidth, displayHeight);
   rectMode(CENTER);
   strokeWeight(5);
-  stroke(255);
-  noFill();
-  rect(rx, ry, displayWidth-(vhall*2), displayHeight-(hhall*2));
-  line(rx, hhall, rx, displayHeight-hhall);
-  line(vhall, hhall*2, displayWidth-vhall, hhall*2);
-  line(vhall, hhall*3, displayWidth-vhall, hhall*3);
+  
   rectMode(CORNER);
   colorMode(HSB, 360, 100, 100);
   fill(h, 100, 100, 75);
@@ -43,5 +38,14 @@ void firGame(Player p) {
   liu.patrol_right();
   pollo.show(pol);
   pollo.patrol_right();
+  rectMode(CENTER);
+  stroke(255);
+  fill(255, 180, 20);
+  strokeWeight(5);
+  rect(rx, ry, displayWidth-(vhall*2), displayHeight-(hhall*2));
+  line(rx, hhall, rx, displayHeight-hhall);
+  line(vhall, hhall*2, displayWidth-vhall, hhall*2);
+  line(vhall, hhall*3, displayWidth-vhall, hhall*3);
+  strokeWeight(1);
 }
 

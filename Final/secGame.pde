@@ -3,11 +3,6 @@ void secGame(Player p) {
   image(floor, 0, 0, displayWidth, displayHeight);
   strokeWeight(5);
   stroke(255);
-  noFill();
-  rect(rx, ry, displayWidth-(vhall*2), displayHeight-(hhall*2));
-  line(rx, hhall, rx, displayHeight-hhall);
-  line(vhall, hhall*2, displayWidth-vhall, hhall*2);
-  line(vhall, hhall*3, displayWidth-vhall, hhall*3);
   rectMode(CORNER);
   colorMode(HSB, 360, 100, 100);
   fill(h, 100, 100, 75);
@@ -40,17 +35,13 @@ void secGame(Player p) {
   pants.patrol_right();
   mejia.show(mej);
   mejia.patrol_mejia();
-  //  if(clair==true){
-  //  claire.show(color(0, 0, 255));
-  //  claire.walk();
-  //  }
-  //  if(sophi==true){
-  //  sophie.show(color(0, 255, 0));
-  //  sophie.walk();
-  //  }
-  //  if (laure==true) {
-  //    lauren.show(color(255, 0, 0));
-  //    lauren.walk();
-  //  }
+  rectMode(CENTER);
+  fill(255, 180, 20);
+  strokeWeight(5);
+  rect(rx, ry, displayWidth-(vhall*2), displayHeight-(hhall*2));
+  line(rx, hhall, rx, displayHeight-hhall);
+  line(vhall, hhall*2, displayWidth-vhall, hhall*2);
+  line(vhall, hhall*3, displayWidth-vhall, hhall*3);
+  strokeWeight(1);
 }
 
