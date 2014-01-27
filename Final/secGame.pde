@@ -1,3 +1,13 @@
+boolean m;
+boolean  bu;
+boolean sra;
+boolean wit;
+boolean leo;
+boolean ssy;
+boolean ar;
+boolean pi;
+boolean chicken;
+boolean loo;
 void secGame(Player p) {
   imageMode(CORNER);
   image(floor, 0, 0, displayWidth, displayHeight);
@@ -25,16 +35,6 @@ void secGame(Player p) {
   textSize (50);
   fill (360, 100, 100);
   text ("Miles: " + score, width/2, 40);
-  monroy.show(mon);
-  monroy.patrol_left();
-  buch.show(dr);
-  buch.patrol_left();
-  mosko.show(mos);
-  mosko.patrol_right();
-  pants.show(pan);
-  pants.patrol_right();
-  mejia.show(mej);
-  mejia.patrol_mejia();
   rectMode(CENTER);
   fill(255, 180, 20);
   strokeWeight(5);
@@ -43,5 +43,25 @@ void secGame(Player p) {
   line(vhall, hhall*2, displayWidth-vhall, hhall*2);
   line(vhall, hhall*3, displayWidth-vhall, hhall*3);
   strokeWeight(1);
-}
+  monroy.show(mon);
+  monroy.patrol_left();
 
+  buch.show(dr);
+  buch.patrol_left();
+  mosko.show(mos);
+  mosko.patrol_right();
+  pants.show(pan);
+  pants.patrol_right();
+  mejia.show(mej);
+  mejia.patrol_mejia();
+  caught(monroy, p);
+  talking1(dmon, p, "I'm very disappointed in you");
+  caught(buch, p);
+  talking1(ddr, p, "I'm very disappointed in you");
+  caught(pants, p);
+  talking1(dpan, p, "I'm very disappointed in you");
+  caught(mosko, p);
+  talking1(dmos, p, "I'm very disappointed in you");
+caught(mejia, p);
+  talking1(dmej, p, "I'm very disappointed in you");
+}

@@ -1,58 +1,3 @@
-Player claire;
-Player lauren;
-Player sophie;
-Teacher monroy;
-Teacher buch;
-Teacher mosko;
-Teacher pants;
-Teacher mejia;
-Teacher valley;
-Teacher liu;
-Teacher pollo;
-Teacher pinto;
-Teacher arnold;
-Teacher sansy;
-Teacher gerstein;
-Teacher ryan;
-int rx, ry, rw, rh;
-int disp;
-boolean instr;
-boolean choose;
-boolean back;
-boolean cred;
-boolean start;
-boolean laure;
-boolean clair;
-boolean sophi;
-boolean first; // boolean for getting to the first floor... this is true when the score is 200
-boolean winning; // gets you to the win screen without having to worry about moving out of the rectangle that is APA... I think
-boolean play;
-PImage floor;
-PImage startHall;
-PImage mon;
-PImage arn;
-PImage pan;
-PImage mos;
-PImage san;
-PImage pol;
-PImage val;
-PImage dr;
-PImage mej;
-PImage pin;
-PImage lu;
-PImage ger;
-PImage mah;
-PImage lucy;
-PImage watson;
-PImage jenn;
-int a, b;
-float cx, cy, cw, ch;
-float vhall, hhall;
-int sw, sh;
-int h;
-int i;
-int score = 0;
-int ancientT = 0; 
 
 void setup() {
   claire = new Player(color(0, 0, 255));
@@ -78,6 +23,17 @@ void setup() {
   lu= loadImage("Liu.png");
   pin=loadImage("Pinto.png");
   ger=loadImage("Gerstein.png");
+  dmon = loadImage("Monroy.JPG");
+  ddr = loadImage("Dr. B.JPG");
+  dmos = loadImage("Moskowitz.JPG");
+  dpan = loadImage("Pantaleo.JPG");
+  dmej = loadImage("Mejia.JPG");
+  dval= loadImage("Valley.JPG");
+  dpol= loadImage("Pollo.JPG");
+  darn = loadImage("Arnold.JPG");
+  dsan= loadImage("Sanservino.JPG");
+  dlu= loadImage("Liu.JPG");
+  dpin=loadImage("Pinto.JPG");
   mah=loadImage("Mahoney.JPG");
   rx= width/2;
   ry=height/2;
@@ -89,6 +45,14 @@ void setup() {
   sw=100;
   sh=90;
   i=200;
+  terx=width/2;
+  tery=height*.75;
+  terw=width/2;
+  terh=100;
+  cerw=width/4;
+  cerx=width-cerw;
+  cerh=100;
+  cery=height-cerh;
   mejia = new Teacher(mej, rx+(vhall/2), 0, 8);
   monroy = new Teacher(mon, rx-vhall, hhall*1.2, 8.5);
   buch = new Teacher(dr, rx-vhall, hhall*2.2, 12);
@@ -109,9 +73,21 @@ void setup() {
   sophi=false;
   clair=false;
   choose=false;
+  cont=false;
   first=false;
   play=false;
   winning=false;
+  fce=false;
+  m=false;
+  bu=false;
+  sra=false;
+  wit=false;
+  leo=false;
+  ssy=false;
+  ar=false;
+  pi=false;
+  chicken=false;
+  loo=false;
 }
 
 void draw() {
@@ -218,6 +194,9 @@ void draw() {
         win();
       }
     }
+  }
+  if(fce==true && cont==true){
+    ellipse(0,0,300,300);
   }
 }
 

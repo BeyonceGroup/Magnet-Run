@@ -25,5 +25,8 @@ void mousePressed() {
   if (start==true && mouseX>rx+(disp*3)-i/2 && mouseX<rx+(disp*3)+i/2 &&  mouseY>ry-(i*.75) && mouseY<ry+(i*.75)) {
     sophi=true;
   }
+  if (fce==true && mouseX<=width && mouseX>=cerx && mouseY<=height && mouseY>=height-cerh) {
+    cont=true;
+  }
 }
 
