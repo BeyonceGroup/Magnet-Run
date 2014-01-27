@@ -53,6 +53,7 @@ void secGame(Player p) {
   line(vhall, hhall*2, displayWidth-vhall, hhall*2);
   line(vhall, hhall*3, displayWidth-vhall, hhall*3);
   strokeWeight(1);
+
   monroy.caught(dmon, p, "I'm very disappointed in you");
   buch.caught(ddr, p, "I'm very disappointed in you");
   mosko.caught(dmos, p, "I'm very disappointed in you");
