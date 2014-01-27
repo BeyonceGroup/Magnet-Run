@@ -35,6 +35,7 @@ void setup() {
   dlu= loadImage("Liu.JPG");
   dpin=loadImage("Pinto.JPG");
   mah=loadImage("Mahoney.JPG");
+  sg= loadImage("sophie.png");
   rx= width/2;
   ry=height/2;
   rw=225;
@@ -88,6 +89,14 @@ void setup() {
   pi=false;
   chicken=false;
   loo=false;
+  student = new Catcher();
+
+  for (int i =0; i<amt; i++) {
+    thing[i] = new Thrown();
+  }
+  tgx=width/2;
+  tgxSp=2;
+  expo = loadImage("expo.png");
 }
 
 void draw() {
@@ -187,49 +196,48 @@ void draw() {
         score++;
         ancientT = millis();
       }
-      if (score >= 40 && sophie.loc.x <= sw && sophie.loc.y <= sh) {
-        winning = true;
-      }
-      if (winning == true) {
-        win();
+      if (fce==true && cont==true && sophi==true) {
+        mini(mon, expo, sg);
+        if (score >= 40 && sophie.loc.x <= sw && sophie.loc.y <= sh) {
+          winning = true;
+        }
+        if (winning == true) {
+          win();
+        }
       }
     }
   }
-  if(fce==true && cont==true){
-    ellipse(0,0,300,300);
+}
+  void monroy() {
   }
-}
 
-void monroy() {
-}
+  void drb() {
+  }
 
-void drb() {
-}
+  void moskowitz() {
+  }
 
-void moskowitz() {
-}
+  void pantaleo() {
+  }
 
-void pantaleo() {
-}
+  void mej() {
+  }
 
-void mej() {
-}
+  void valley() {
+  }
 
-void valley() {
-}
+  void liu() {
+  }
 
-void liu() {
-}
+  void pollo() {
+  }
 
-void pollo() {
-}
+  void sansy() {
+  }
 
-void sansy() {
-}
+  void arnold() {
+  }
 
-void arnold() {
-}
-
-void pinto() {
-}
+  void pinto() {
+  }
 
