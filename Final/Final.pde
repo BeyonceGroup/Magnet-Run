@@ -1,4 +1,81 @@
-
+Player claire;
+Player lauren;
+Player sophie;
+Teacher monroy;
+Teacher buch;
+Teacher mosko;
+Teacher pants;
+Teacher mejia;
+Teacher valley;
+Teacher liu;
+Teacher pollo;
+Teacher pinto;
+Teacher arnold;
+Teacher sansy;
+Teacher gerstein;
+Teacher ryan;
+PImage expo;
+PImage gulp;
+PImage gatsby;
+PImage sg;
+PImage lb;
+PImage cf;
+PImage fail;
+PImage jdg;
+int rx, ry, rw, rh;
+int disp;
+boolean instr;
+boolean choose;
+boolean back;
+boolean cred;
+boolean start;
+boolean laure;
+boolean clair;
+boolean sophi;
+boolean first; // boolean for getting to the first floor... this is true when the score is 200
+boolean winning; // gets you to the win screen without having to worry about moving out of the rectangle that is APA... I think
+boolean fce;
+boolean play;
+PImage floor;
+PImage startHall;
+PImage mon;
+PImage arn;
+PImage pan;
+PImage mos;
+PImage san;
+PImage pol;
+PImage val;
+PImage dr;
+PImage mej;
+PImage pin;
+PImage lu;
+PImage ger;
+PImage mah;
+PImage lucy;
+PImage watson;
+PImage jenn;
+PImage dmon;
+PImage darn;
+PImage dpan;
+PImage dmos;
+PImage dsan;
+PImage dpol;
+PImage dval;
+PImage ddr;
+PImage dmej;
+PImage dpin;
+PImage dlu;
+int a, b;
+float cx, cy, cw, ch;
+float vhall, hhall;
+int sw, sh;
+int h;
+int i;
+int score = 0;
+float terx, tery, terw, terh;
+float cerx, cery, cerw, cerh;
+int ancientT = 0; 
+boolean cont;
 void setup() {
   claire = new Player(color(0, 0, 255));
   lauren= new Player(color(255, 0, 0));
@@ -89,6 +166,7 @@ void setup() {
   pi=false;
   chicken=false;
   loo=false;
+  fce = false;
   student = new Catcher();
 
   for (int i =0; i<amt; i++) {
@@ -208,36 +286,36 @@ void draw() {
     }
   }
 }
-  void monroy() {
-  }
+void monroy() {
+}
 
-  void drb() {
-  }
+void drb() {
+}
 
-  void moskowitz() {
-  }
+void moskowitz() {
+}
 
-  void pantaleo() {
-  }
+void pantaleo() {
+}
 
-  void mej() {
-  }
+void mej() {
+}
 
-  void valley() {
-  }
+void valley() {
+}
 
-  void liu() {
-  }
+void liu() {
+}
 
-  void pollo() {
-  }
+void pollo() {
+}
 
-  void sansy() {
-  }
+void sansy() {
+}
 
-  void arnold() {
-  }
+void arnold() {
+}
 
-  void pinto() {
-  }
+void pinto() {
+}
 

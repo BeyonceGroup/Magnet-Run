@@ -1,5 +1,5 @@
 boolean m;
-boolean  bu;
+boolean bu;
 boolean sra;
 boolean wit;
 boolean leo;
@@ -35,17 +35,8 @@ void secGame(Player p) {
   textSize (50);
   fill (360, 100, 100);
   text ("Miles: " + score, width/2, 40);
-  rectMode(CENTER);
-  fill(255, 180, 20);
-  strokeWeight(5);
-  rect(rx, ry, displayWidth-(vhall*2), displayHeight-(hhall*2));
-  line(rx, hhall, rx, displayHeight-hhall);
-  line(vhall, hhall*2, displayWidth-vhall, hhall*2);
-  line(vhall, hhall*3, displayWidth-vhall, hhall*3);
-  strokeWeight(1);
   monroy.show(mon);
   monroy.patrol_left();
-
   buch.show(dr);
   buch.patrol_left();
   mosko.show(mos);
@@ -54,14 +45,28 @@ void secGame(Player p) {
   pants.patrol_right();
   mejia.show(mej);
   mejia.patrol_mejia();
-  caught(monroy, p);
-  talking1(dmon, p, "I'm very disappointed in you");
-  caught(buch, p);
-  talking1(ddr, p, "I'm very disappointed in you");
-  caught(pants, p);
-  talking1(dpan, p, "I'm very disappointed in you");
-  caught(mosko, p);
-  talking1(dmos, p, "I'm very disappointed in you");
-caught(mejia, p);
-  talking1(dmej, p, "I'm very disappointed in you");
+  rectMode(CENTER);
+  fill(255, 180, 20);
+  strokeWeight(5);
+  rect(rx, ry, displayWidth-(vhall*2), displayHeight-(hhall*2));
+  line(rx, hhall, rx, displayHeight-hhall);
+  line(vhall, hhall*2, displayWidth-vhall, hhall*2);
+  line(vhall, hhall*3, displayWidth-vhall, hhall*3);
+  strokeWeight(1);
+  monroy.caught(dmon, p, "I'm very disappointed in you");
+  buch.caught(ddr, p, "I'm very disappointed in you");
+  mosko.caught(dmos, p, "I'm very disappointed in you");
+  pants.caught(dpan, p, "I'm very disappointed in you");
+  mejia.caught(dmej, p, "I'm very disappointed in you");
+  //  caught(monroy, p);
+  //  talking1(dmon, p, "I'm very disappointed in you");
+  //  caught(buch, p);
+  //  talking1(ddr, p, "I'm very disappointed in you");
+  //  caught(pants, p);
+  //  talking1(dpan, p, "I'm very disappointed in you");
+  //  caught(mosko, p);
+  //  talking1(dmos, p, "I'm very disappointed in you");
+  //  caught(mejia, p);
+  //  talking1(dmej, p, "I'm very disappointed in you");
 }
+
