@@ -28,6 +28,9 @@ void monroy(Teacher t, PImage disappoint, Player p, String words) {
       if (mfce==true && mouseX<=width && mouseX>=cerx && mouseY>=cery && mouseY<=height) {
         lose();
       }
+      else {
+       sherlawk.stop(); 
+      }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
     }
@@ -82,6 +85,9 @@ void moskowitz(Teacher t, PImage disappoint, Player p, String words) {
       if (mosfce==true && mouseX<=width && mouseX>=cerx && mouseY>=cery && mouseY<=height) {
         lose();
       }
+       else {
+       sherlawk.stop(); 
+      }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
     }
@@ -108,6 +114,9 @@ void pantaleo(Teacher t, PImage disappoint, Player p, String words) {
       text("Continue...", cerx+20, cery+60); 
       if (pfce==true && mouseX<=width && mouseX>=cerx&& mouseY>=cery && mouseY<=height) {
         lose();
+      }
+       else {
+       sherlawk.stop(); 
       }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
@@ -136,6 +145,9 @@ void mej(Teacher t, PImage disappoint, Player p, String words) {
       if (mejfce==true && mouseX<=width && mouseX>=cerx && mouseY>=cery && mouseY<=height) {
         lose();
       }
+       else {
+       sherlawk.stop(); 
+      }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
     }
@@ -162,6 +174,9 @@ void sansy(Teacher t, PImage disappoint, Player p, String words) {
       text("Continue...", cerx+20, cery+60); 
       if (sfce==true && mouseX<=width && mouseX>=cerx && mouseY>=cery && mouseY<=height) {
         lose();
+      }
+       else {
+       sherlawk.stop(); 
       }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
@@ -190,6 +205,9 @@ void arnold(Teacher t, PImage disappoint, Player p, String words) {
       if (afce==true && mouseX<=width && mouseX>=cerx && mouseY>=cery && mouseY<=height) {
         lose();
       }
+       else {
+       sherlawk.stop(); 
+      }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
     }
@@ -216,6 +234,9 @@ void pinto(Teacher t, PImage disappoint, Player p, String words) {
       text("Continue...", cerx+20, cery+60); 
       if (pinfce==true && mouseX<=width && mouseX>=cerx && mouseY>=height-cery && mouseY<=height) {
         lose();
+      }
+       else {
+       sherlawk.stop(); 
       }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
@@ -244,6 +265,9 @@ void valley(Teacher t, PImage disappoint, Player p, String words) {
       if (vfce==true && mouseX<=width && mouseX>=cerx && mouseY>=cery && mouseY<=height) {
         lose();
       }
+       else {
+       sherlawk.stop(); 
+      }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
     }
@@ -271,6 +295,9 @@ void liu(Teacher t, PImage disappoint, Player p, String words) {
       if (lfce==true && mouseX<=width && mouseX>=width-cerx && mouseY>=cery && mouseY<=height) {
         lose();
       }
+       else {
+       sherlawk.stop(); 
+      }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
     }
@@ -297,6 +324,9 @@ void pollo(Teacher t, PImage disappoint, Player p, String words) {
       text("Continue...", cerx+20, cery+60); 
       if (polfce==true && mouseX<=width && mouseX>=cerx && mouseY>=cery && mouseY<=height) {
         lose();
+      }
+       else {
+       sherlawk.stop(); 
       }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;

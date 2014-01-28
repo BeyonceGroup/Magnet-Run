@@ -77,6 +77,9 @@ float terx, tery, terw, terh;
 float cerx, cery, cerw, cerh;
 int ancientT = 0; 
 boolean cont;
+import ddf.minim.*;
+Minim sherlawk;
+AudioPlayer loser;
 void setup() {
   claire = new Player(color(0, 0, 255));
   lauren= new Player(color(255, 0, 0));
@@ -180,13 +183,14 @@ void setup() {
   polfce=false;
   vfce=false;
   student = new Catcher();
-
   for (int i =0; i<amt; i++) {
     thing[i] = new Thrown();
   }
   tgx=width/2;
   tgxSp=2;
   expo = loadImage("expo.png");
+  sherlawk= new Minim (this);
+  loser = sherlawk.loadFile("Sherlawk.mp3");
 }
 
 void draw() {
@@ -298,36 +302,8 @@ void draw() {
     }
   }
 }
-void monroy() {
+void stop(){
+  loser.close();
+  sherlawk.stop();
+  super.stop();
 }
-
-void drb() {
-}
-
-void moskowitz() {
-}
-
-void pantaleo() {
-}
-
-void mej() {
-}
-
-void valley() {
-}
-
-void liu() {
-}
-
-void pollo() {
-}
-
-void sansy() {
-}
-
-void arnold() {
-}
-
-void pinto() {
-}
-

@@ -4,5 +4,6 @@ void lose() {
   textSize(100);
   textAlign(CENTER);
   text ("YOU LOSE!", displayWidth/2, displayHeight/2);
+  loser.play();
 }
 
