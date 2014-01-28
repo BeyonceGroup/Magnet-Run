@@ -14,15 +14,28 @@ Teacher arnold;
 Teacher sansy;
 Teacher gerstein;
 Teacher ryan;
+PImage expo;
+PImage gulp;
+PImage gatsby;
+PImage sg;
+PImage lb;
+PImage cf;
+PImage fail;
+PImage jdg;
 int rx, ry, rw, rh;
 int disp;
 boolean instr;
+boolean choose;
 boolean back;
 boolean cred;
 boolean start;
 boolean laure;
 boolean clair;
 boolean sophi;
+boolean first; // boolean for getting to the first floor... this is true when the score is 200
+boolean winning; // gets you to the win screen without having to worry about moving out of the rectangle that is APA... I think
+boolean fce;
+boolean play;
 PImage floor;
 PImage startHall;
 PImage mon;
@@ -38,48 +51,98 @@ PImage pin;
 PImage lu;
 PImage ger;
 PImage mah;
+PImage lucy;
+PImage watson;
+PImage jenn;
+PImage dmon;
+PImage darn;
+PImage dpan;
+PImage dmos;
+PImage dsan;
+PImage dpol;
+PImage dval;
+PImage ddr;
+PImage dmej;
+PImage dpin;
+PImage dlu;
 int a, b;
-int inx;
-float cx,cy,cw,ch;
-
+float cx, cy, cw, ch;
+float vhall, hhall;
+int sw, sh;
+int h;
+int i;
+int score = 0;
+float terx, tery, terw, terh;
+float cerx, cery, cerw, cerh;
+int ancientT = 0; 
+boolean cont;
 void setup() {
-  //  claire = new Player(color(0,0,255));
-  //  lauren= new Player(color(255,0,0));
-  //  sophie =new Player(color(0,255,0));
-//  monroy = new Teacher(mon, a, b, .1, inx);
-//  buch = new Teacher(dr, a, b, 3, inx);
-//  mosko = new Teacher(mos, a, b, 1, inx);
-//  pants = new Teacher(pan, a, b, 1.2, inx);
-//  mejia = new Teacher(mej, a, b, .5, inx);
-//  valley = new Teacher(val, a, b, 2, inx);
-//  liu = new Teacher(lu,a,b,.5,inx);
-//  pollo = new Teacher(pol, a, b, 2, inx);
-//  pinto = new Teacher(pin,a,b,.75,inx);
-//  arnold = new Teacher(arn, a, b, .4, inx);
-//  sansy= new Teacher(san, a, b, 4, inx);
-  //  gerstein = new Teacher(ger,a,b,xSpeed,inx);
+  claire = new Player(color(0, 0, 255));
+  lauren= new Player(color(255, 0, 0));
+  sophie =new Player(color(0, 255, 0));
+  //  gerstein = new Teacher(ger,a,b,xSpeed);
   //  ryan= new Teacher(otherC,a,b,xSpeed,inx);
   size(displayWidth, displayHeight);
   floor = loadImage("floor.JPG");
   startHall = loadImage("start.JPG");
-  mon = loadImage("Monroy.JPG");
-  dr = loadImage("Dr. B.JPG");
-  mos = loadImage("Moskowitz.JPG");
-  pan = loadImage("Pantaleo.JPG");
-  mej = loadImage("Mejia.JPG");
-  val= loadImage("Valley.JPG");
-  pol= loadImage("Pollo.JPG");
-  arn = loadImage("Arnold.JPG");
-  san= loadImage("Sanservino.JPG");
-  lu= loadImage("Liu.JPG");
-  pin=loadImage("Pinto.JPG");
-  ger=loadImage("Gerstein.JPG");
+  jenn = loadImage("Jenn.jpg");
+  lucy= loadImage("Lucy.jpg");
+  watson = loadImage("Watson.jpg");
+  mon = loadImage("Monroy.png");
+  dr = loadImage("DrB.png");
+  mos = loadImage("Moskowitz.png");
+  pan = loadImage("Pantaleo.png");
+  mej = loadImage("Mejia.png");
+  val= loadImage("Valley.png");
+  pol= loadImage("Pollo.png");
+  arn = loadImage("Arnold.png");
+  san= loadImage("Sanservino.png");
+  lu= loadImage("Liu.png");
+  pin=loadImage("Pinto.png");
+  ger=loadImage("Gerstein.png");
+  dmon = loadImage("Monroy.JPG");
+  ddr = loadImage("Dr. B.JPG");
+  dmos = loadImage("Moskowitz.JPG");
+  dpan = loadImage("Pantaleo.JPG");
+  dmej = loadImage("Mejia.JPG");
+  dval= loadImage("Valley.JPG");
+  dpol= loadImage("Pollo.JPG");
+  darn = loadImage("Arnold.JPG");
+  dsan= loadImage("Sanservino.JPG");
+  dlu= loadImage("Liu.JPG");
+  dpin=loadImage("Pinto.JPG");
   mah=loadImage("Mahoney.JPG");
+  sg= loadImage("sophie.png");
   rx= width/2;
   ry=height/2;
   rw=225;
   rh=50;
   disp=75;
+  hhall=displayHeight/5;
+  vhall=displayWidth/6;
+  sw=100;
+  sh=90;
+  i=200;
+  terx=width/2;
+  tery=height*.75;
+  terw=width/2;
+  terh=100;
+  cerw=width/4;
+  cerx=width-cerw;
+  cerh=100;
+  cery=height-cerh;
+  mejia = new Teacher(mej, rx+(vhall/2), 0, 8);
+  monroy = new Teacher(mon, rx-vhall, hhall*1.2, 8.5);
+  buch = new Teacher(dr, rx-vhall, hhall*2.2, 12);
+  mosko = new Teacher(mos, rx+vhall, hhall*1.2, 8.5);
+  pants = new Teacher(pan, rx+vhall, hhall*3.2, 10);
+  sansy= new Teacher(san, rx-vhall, hhall*1.2, 20);
+  arnold = new Teacher(arn, rx-vhall, hhall*2.2, 8);
+  pinto = new Teacher(pin, rx-vhall, hhall*3.2, 10);
+  valley = new Teacher(val, rx+vhall, hhall*1.2, 10.5);
+  liu = new Teacher(lu, rx+vhall, hhall*2.2, 3);
+  pollo = new Teacher(pol, rx+vhall, hhall*3.2, 12);
+  h=0;
   instr = false;
   back = false;
   cred=false;
@@ -87,6 +150,35 @@ void setup() {
   start=false;
   sophi=false;
   clair=false;
+  choose=false;
+  cont=false;
+  first=false;
+  play=false;
+  winning=false;
+  fce=false;
+  m=false;
+  bu=false;
+  sra=false;
+  wit=false;
+  leo=false;
+  ssy=false;
+  ar=false;
+  pi=false;
+  chicken=false;
+  loo=false;
+  mfce=false;
+  bfce=false;
+  mosfce=false;
+  pfce=false;
+  mejfce=false;
+  student = new Catcher();
+
+  for (int i =0; i<amt; i++) {
+    thing[i] = new Thrown();
+  }
+  tgx=width/2;
+  tgxSp=2;
+  expo = loadImage("expo.png");
 }
 
 void draw() {
@@ -100,140 +192,104 @@ void draw() {
   if (instr==true) {
     instruct();
   }
-  if (start==true) {
+  if (choose==true) {
     choose();
+    start=true;
   }
   if (start==true && laure==true) {
     secGame(lauren);
+    lauren.show(color(255, 0, 0));
+    lauren.walk();
+    if (millis() - ancientT > 1000) {
+      score++;
+      ancientT = millis();
+    }
+    if (score >= 20) {
+      first = true;
+    }
+    if (first == true && lauren.loc.x >= displayWidth-sw && lauren.loc.y <= sh || first == true && lauren.loc.x <= sw && lauren.loc.y >= displayHeight-sh) {
+      play = true;
+    }
+    if (play == true) {
+      firGame(lauren);
+      lauren.show(color(255, 0, 0));
+      lauren.walk();
+      if (millis() - ancientT > 1000) {
+        score++;
+        ancientT = millis();
+      }
+      if (score >= 40 && lauren.loc.x <= sw && lauren.loc.y <= sh) {
+        winning = true;
+      }
+      if (winning == true) {
+        win();
+      }
+    }
   }
   if (start==true && clair==true) {
     secGame(claire);
+    claire.show(color(0, 0, 255));
+    claire.walk();
+    if (millis()-ancientT > 1000) {
+      score++;
+      ancientT = millis();
+    }
+    if (score >= 20) {
+      first = true;
+    }
+    if (first == true && claire.loc.x >= displayWidth-sw && claire.loc.y <= sh || first == true && claire.loc.x <= sw && claire.loc.y >= displayHeight-sh) {
+      play = true;
+    }
+    if (play == true) {
+      firGame(claire);
+      claire.show(color(0, 0, 255));
+      claire.walk();
+      if (millis() - ancientT > 1000) {
+        score++;
+        ancientT = millis();
+      }
+      if (score >= 40 && claire.loc.x <= sw && claire.loc.y <= sh) {
+        winning = true;
+      }
+      if (winning == true) {
+        win();
+      }
+    }
   }
   if (start==true && sophi==true) {
     secGame(sophie);
+    sophie.show(color(0, 255, 0));
+    sophie.walk();
+    if (millis()-ancientT > 1000) {
+      score++;
+      ancientT = millis();
+    }
+    if (score >= 20) {
+      first = true;
+    }
+    if (first == true && sophie.loc.x >= displayWidth-sw && sophie.loc.y <= sh || first == true && sophie.loc.x <= sw && sophie.loc.y >= displayHeight-sh) {
+      play = true;
+    }
+    if (play == true) {
+      firGame(sophie);
+      sophie.show(color(0, 255, 0));
+      sophie.walk();
+      if (millis() - ancientT > 1000) {
+        score++;
+        ancientT = millis();
+      }
+      if (fce==true && cont==true && sophi==true) {
+        mini(mon, expo, sg);
+        if (score >= 40 && sophie.loc.x <= sw && sophie.loc.y <= sh) {
+          winning = true;
+        }
+        if (winning == true) {
+          win();
+        }
+      }
+    }
   }
 }
-
-void strt() {
-  //magnet hallway as bg
-  image(startHall, 0, 0, displayWidth, displayHeight);
-  fill(255, 255, 255, 75);
-  stroke(0, 0, 255);
-  rectMode(CENTER);
-  rect(rx, ry-disp, rw, rh);
-  fill(0, 0, 255);
-  textAlign(CENTER, CENTER);
-  textSize(35);
-  text("Start", rx, ry-disp);
-  fill(255, 255, 255, 75); //INSTRUCTIONS
-  stroke(0, 0, 255);
-  rectMode(CENTER);
-  rect(rx, ry, rw, rh);
-  fill(0, 0, 255);
-  textAlign(CENTER, CENTER);
-  textSize(35);
-  text("Instructions", rx, ry);
-  fill(255, 255, 255, 75); //CREDITS
-  stroke(0, 0, 255);
-  rectMode(CENTER);
-  rect(rx, ry+disp, rw, rh);
-  fill(0, 0, 255);
-  textAlign(CENTER, CENTER);
-  textSize(35);
-  text("Credits", rx, ry+disp);
-  textSize(75);
-  text("Magnet Run", rx, ry-(disp*2.5));
-}
-
-void choose () {
-  image(startHall, 0, 0, displayWidth, displayHeight);
-  fill(255, 255, 255, 75);
-  noStroke();
-  rect(rx, ry, displayWidth, displayHeight);
-  textAlign(CENTER, CENTER);
-  textSize(45);
-  fill(0, 0, 255);
-  text("Choose a Player!", rx, ry-(disp*3.5));
-  noFill();
-  stroke(0, 0, 255);
-  rect(rx-(disp*2), ry, rw/2, rh); //image of lauren
-  rect(rx, ry, rw/2, rh); //image of claire
-  rect(rx+(disp*2), ry, rw/2, rh); //image of sophie
-}
-
-void secGame(Player p) {
-  image(floor, 0, 0, displayWidth, displayHeight);
-  strokeWeight(5);
-  stroke(255);
-}
-
-void instruct () {
-  image(startHall, 0, 0, displayWidth, displayHeight);
-  fill(255, 255, 255, 75);
-  noStroke();
-  rect(rx, ry, displayWidth, displayHeight);
-  textSize(45);
-  fill(0, 0, 255);
-  text("~Instructions~", rx, ry-(disp*3.5));
-  textSize(30);
-  fill(0, 0, 255);
-  text("You are a student at Magnet High School. You've been trapped in class for hours, and you can't \n take it anymore. You run out of class, and try to find your way out. However, on the way, you \n encounter several angry teachers. It is your job to dodge those teachers and make sure they \n don't catch you. If they do, you'll get a LOP. If you get three LOPs, your life (the game) is over. \n But the longer you are able to survive Magnet's hallways, the more miles you get. You need 200 \n miles to go down to the first floor. Collect little Stanko faces to earn bonus miles! Once you get \n to the first floor, beware of Sanservino and others. Try to get to the door and escape \n to the parking lot. Remember, if Mrs. Ryan catches you, you'll be expelled immediately! \n \n Good luck!", rx, ry+(disp/5));
-  fill(255, 255, 255, 75);
-  stroke(0, 0, 255);
-  rect(rx, ry+(disp*4), rw, rh);
-  fill(0, 0, 255);
-  textSize(35);
-  text("Go Back", rx, ry+(disp*4));
-}
-
-void credit() {
-  image(startHall, 0, 0, displayWidth, displayHeight);
-  fill(255, 255, 255, 75);
-  noStroke();
-  rect(rx, ry, displayWidth, displayHeight);
-  fill(0, 0, 255);
-  textSize(45);
-  text("~Credits~", rx, ry-(disp*3.5));
-  textSize(30);
-  text("Programmers: Claire Farrokh and Sophie Giuliani \n Quality Assurance Tester: Claire Farrokh \n User Interface Designer: Sophie Giuliani \n Graphics Designer: Lauren Broadwell \n Project Manager: Lauren Broadwell \n Created by The Beyonce Group \n Copyright 2014", rx, ry+(disp/5));
-  fill(255, 255, 255, 75);
-  stroke(0, 0, 255);
-  rect(rx, ry+(disp*4), rw, rh);
-  fill(0, 0, 255);
-  textSize(35);
-  text("Go Back", rx, ry+(disp*4));
-}
-
-void mousePressed() {
-  if (mouseX>rx-rw/2 && mouseX<rx+rw/2 && mouseY>ry-rh/2 && mouseY<ry+rh/2) {
-    instr=true;
-  }
-  if (instr==true && mouseX>rx-rw/2 && mouseX<rx+rw/2 && mouseY>(ry+(disp*4)-rh/2) && mouseY<(ry+(disp*4)+rh/2)) {
-    back=true;
-    instr=false;
-  }
-  if (mouseX>rx-rw/2 && mouseX<rx+rw/2 && mouseY>ry+disp-rh/2 && mouseY<ry+disp+rh/2) {
-    cred=true;
-  }
-  if (cred==true && mouseX>rx-rw/2 && mouseX<rx+rw/2 && mouseY>(ry+(disp*4)-rh/2) && mouseY<(ry+(disp*4)+rh/2)) {
-    back=true;
-    cred=false;
-  }
-  if (mouseX>rx-rw/2 && mouseX<rx+rw/2 && mouseY>ry-disp-rh/2 && mouseY<ry-disp+rh/2) {
-    start=true;
-  }
-  if (start==true && mouseX>rx-(disp*2)-rw/4 && mouseX<rx-(disp*2)+rw/4 &&  mouseY>ry-rh/2 && mouseY<ry+rh/2) {
-    laure=true;
-  }
-  if (start==true && mouseX>rx-rw/4 && mouseX<rx+rw/4 &&  mouseY>ry-rh/2 && mouseY<ry+rh/2) {
-    clair=true;
-  }
-  if (start==true && mouseX>rx+(disp*2)-rw/4 && mouseX<rx+(disp*2)+rw/4 &&  mouseY>ry-rh/2 && mouseY<ry+rh/2) {
-    sophi=true;
-  }
-}
-
-
 void monroy() {
 }
 

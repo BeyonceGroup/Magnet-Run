@@ -1,32 +1,36 @@
 class Player {
   int d;
-  color c;
   PVector loc;
-  
+
   Player (color otherC) {
     d = 20;
-    loc = new PVector (width-20, height-20);
+    loc = new PVector (displayWidth/4, displayHeight-(displayHeight/8));
   }
-  
-  void show () {
-   fill (c);
-   ellipse (loc.x, loc.y, d, d); 
+
+  void show (color otherC) {
+    fill (otherC);
+    ellipse (loc.x, loc.y, d, d);
   }
-  
-  void walk(){
-    if (keyPressed && key == CODED){
-      if(keyCode == LEFT){
-        loc.x--;
+
+  void walk() {
+    if (keyPressed && key == CODED) {
+      if (keyCode == LEFT) {
+        loc.x-=10;
       }
-      if(keyCode == RIGHT){
-        loc.x++;
+      if (keyCode == RIGHT) {
+        loc.x+=10;
       }
-      if(keyCode == UP){
-        loc.y--;
+      if (keyCode == UP) {
+        loc.y-=10;
       }
-      if(keyCode == DOWN){
-        loc.y++;
+      if (keyCode == DOWN) {
+        loc.y+=10;
       }
+    }
+    if (loc.x <= displayWidth-vhall && loc.x >= vhall && loc.y <= displayHeight-hhall && loc.y >= hhall) {
+      loc.x = displayWidth/4;
+      loc.y = displayHeight-(displayHeight/8);
     }
   }
 }
+
