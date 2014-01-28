@@ -80,6 +80,8 @@ boolean cont;
 import ddf.minim.*;
 Minim sherlawk;
 AudioPlayer loser;
+Minim jiyuu;
+AudioPlayer winner;
 void setup() {
   claire = new Player(color(0, 0, 255));
   lauren= new Player(color(255, 0, 0));
@@ -191,6 +193,8 @@ void setup() {
   expo = loadImage("expo.png");
   sherlawk= new Minim (this);
   loser = sherlawk.loadFile("Sherlawk.mp3");
+  jiyuu = new Minim (this);
+  winner = jiyuu.loadFile("Jiyuu no Tsubasa.mp3");
 }
 
 void draw() {
@@ -290,20 +294,19 @@ void draw() {
         score++;
         ancientT = millis();
       }
-      if (fce==true && cont==true && sophi==true) {
-        mini(mon, expo, sg);
-        if (score >= 40 && sophie.loc.x <= sw && sophie.loc.y <= sh) {
-          winning = true;
-        }
-        if (winning == true) {
-          win();
-        }
+      if (score >= 40 && sophie.loc.x <= sw && sophie.loc.y <= sh) {
+        winning = true;
+      }
+      if (winning == true) {
+        win();
       }
     }
   }
 }
-void stop(){
+
+void stop() {
   loser.close();
   sherlawk.stop();
   super.stop();
 }
+
