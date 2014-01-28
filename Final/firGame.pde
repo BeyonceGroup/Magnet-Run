@@ -23,18 +23,18 @@ void firGame(Player p) {
   textSize (50);
   fill (360, 100, 100);
   text ("Miles: " + score, width/2, 40);
-//  sansy.show(san);
-//  sansy.patrol_left();
-//  arnold.show(arn);
-//  arnold.patrol_left();
-//  pinto.show(pin);
-//  pinto.patrol_left();
-//  valley.show(val);
-//  valley.patrol_right();
-//  liu.show(lu);
-//  liu.patrol_right();
-//  pollo.show(pol);
-//  pollo.patrol_right();
+  sansy.show(san);
+  sansy.patrol_left();
+  arnold.show(arn);
+  arnold.patrol_left();
+  pinto.show(pin);
+  pinto.patrol_left();
+  valley.show(val);
+  valley.patrol_right();
+  liu.show(lu);
+  liu.patrol_right();
+  pollo.show(pol);
+  pollo.patrol_right();
   rectMode(CENTER);
   stroke(255);
   fill(255, 180, 20);
@@ -44,5 +44,11 @@ void firGame(Player p) {
   line(vhall, hhall*2, displayWidth-vhall, hhall*2);
   line(vhall, hhall*3, displayWidth-vhall, hhall*3);
   strokeWeight(1);
+  sansy(sansy, dsan, p, "I'm very disappointed in you");
+  arnold(arnold, darn, p, "I'm very disappointed in you");
+  pinto(pinto, dpin, p, "I'm very disappointed in you");
+  valley(valley, dval, p, "I'm very disappointed in you");
+  liu(liu, dlu, p, "I'm very disappointed in you");
+  pollo(pollo, dpol, p, "I'm very disappointed in you");
 }
 

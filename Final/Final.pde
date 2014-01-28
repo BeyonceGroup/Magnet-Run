@@ -171,6 +171,12 @@ void setup() {
   mosfce=false;
   pfce=false;
   mejfce=false;
+  sfce=false;
+  afce=false;
+  lfce=false;
+  pinfce=false;
+  polfce=false;
+  vfce=false;
   student = new Catcher();
 
   for (int i =0; i<amt; i++) {
