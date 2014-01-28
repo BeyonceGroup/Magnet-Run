@@ -55,10 +55,10 @@ void secGame(Player p) {
   strokeWeight(1);
   textSize(10);
   monroy(monroy, dmon, p, "Oh, you're leaving too?");
-  drb(buch, ddr, p, "Well, frankly, I can't understand why a Magned student would be running out of class in the first place. this is highly abnormal, but I suppose I'llhave to give you a LOP");
+  drb(buch, ddr, p, "Well, frankly, I can't understand why a Magned student would be running out of class in the first place. this is highly abnormal, but I suppose I'llhave to give you a LOP.");
   moskowitz(mosko, dmos, p, "Okay well... here's a LOP...");
   pantaleo(pants, dpan, p, "If you were planning on getting past me, you really shouldn't have been moving with a constant velocity. The key is to accelerate when you're near teachers, mmkay?");
-  mej(mejia, dmej, p, "I'm very disappointed in you");
+  mej(mejia, dmej, p, "*Angry Spanish*");
   //  monroy.caught(dmon, p, "I'm very disappointed in you");
   //  buch.caught(ddr, p, "I'm very disappointed in you");
   //  mosko.caught(dmos, p, "I'm very disappointed in you");
