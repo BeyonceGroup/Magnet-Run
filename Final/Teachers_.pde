@@ -25,8 +25,8 @@ void monroy(Teacher t, PImage disappoint, Player p, String words) {
       textAlign(CORNER);
       fill(255);
       text("Continue...", cerx+20, cery+60); 
-      if (keyPressed && key== 'C' && fce==true && mouseX<=width && mouseX>=cerx && mouseY<=height-cery && mouseY>=height) {
-        image(dpan, 0, 0, displayWidth, displayHeight);
+      if (mfce==true && mouseX<=width && mouseX>=cerx && mouseY>=cery && mouseY<=height) {
+        lose();
       }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
@@ -52,8 +52,8 @@ void drb(Teacher t, PImage disappoint, Player p, String words) {
       textAlign(CORNER);
       fill(255);
       text("Continue...", cerx+20, cery+60); 
-      if (keyPressed && key== 'C' && fce==true && mouseX<=width && mouseX>=cerx && mouseY<=height-cery && mouseY>=height) {
-        image(dpan, 0, 0, displayWidth, displayHeight);
+      if (bfce==true && mouseX<=width && mouseX>=cerx && mouseY>=cery && mouseY<=height) {
+        lose();
       }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
@@ -79,8 +79,8 @@ void moskowitz(Teacher t, PImage disappoint, Player p, String words) {
       textAlign(CORNER);
       fill(255);
       text("Continue...", cerx+20, cery+60); 
-      if (keyPressed && key== 'C' && fce==true && mouseX<=width && mouseX>=cerx && mouseY<=height-cery && mouseY>=height) {
-        image(dpan, 0, 0, displayWidth, displayHeight);
+      if (mosfce==true && mouseX<=width && mouseX>=cerx && mouseY>=cery && mouseY<=height) {
+        lose();
       }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
@@ -106,8 +106,8 @@ void pantaleo(Teacher t, PImage disappoint, Player p, String words) {
       textAlign(CORNER);
       fill(255);
       text("Continue...", cerx+20, cery+60); 
-      if (keyPressed && key== 'C' && fce==true && mouseX<=width && mouseX>=cerx && mouseY<=height-cery && mouseY>=height) {
-        image(dpan, 0, 0, displayWidth, displayHeight);
+      if (pfce==true && mouseX<=width && mouseX>=cerx&& mouseY>=cery && mouseY<=height) {
+        lose();
       }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
@@ -133,8 +133,8 @@ void mej(Teacher t, PImage disappoint, Player p, String words) {
       textAlign(CORNER);
       fill(255);
       text("Continue...", cerx+20, cery+60); 
-      if (keyPressed && key== 'C' && fce==true && mouseX<=width && mouseX>=cerx && mouseY<=height-cery && mouseY>=height) {
-        image(dpan, 0, 0, displayWidth, displayHeight);
+      if (mejfce==true && mouseX<=width && mouseX>=cerx && mouseY>=cery && mouseY<=height) {
+        lose();
       }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
@@ -160,8 +160,8 @@ void sansy(Teacher t, PImage disappoint, Player p, String words) {
       textAlign(CORNER);
       fill(255);
       text("Continue...", cerx+20, cery+60); 
-      if (keyPressed && key== 'C' && fce==true && mouseX<=width && mouseX>=cerx && mouseY<=height-cery && mouseY>=height) {
-        image(dpan, 0, 0, displayWidth, displayHeight);
+      if (sfce==true && mouseX<=width && mouseX>=cerx && mouseY>=cery && mouseY<=height) {
+        lose();
       }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
@@ -187,8 +187,8 @@ void arnold(Teacher t, PImage disappoint, Player p, String words) {
       textAlign(CORNER);
       fill(255);
       text("Continue...", cerx+20, cery+60); 
-      if (keyPressed && key== 'C' && fce==true && mouseX<=width && mouseX>=cerx && mouseY<=height-cery && mouseY>=height) {
-        image(dpan, 0, 0, displayWidth, displayHeight);
+      if (afce==true && mouseX<=width && mouseX>=cerx && mouseY>=cery && mouseY<=height) {
+        lose();
       }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
@@ -214,8 +214,8 @@ void pinto(Teacher t, PImage disappoint, Player p, String words) {
       textAlign(CORNER);
       fill(255);
       text("Continue...", cerx+20, cery+60); 
-      if (keyPressed && key== 'C' && fce==true && mouseX<=width && mouseX>=cerx && mouseY<=height-cery && mouseY>=height) {
-        image(dpan, 0, 0, displayWidth, displayHeight);
+      if (pinfce==true && mouseX<=width && mouseX>=cerx && mouseY>=height-cery && mouseY<=height) {
+        lose();
       }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
@@ -241,8 +241,8 @@ void valley(Teacher t, PImage disappoint, Player p, String words) {
       textAlign(CORNER);
       fill(255);
       text("Continue...", cerx+20, cery+60); 
-      if (keyPressed && key== 'C' && fce==true && mouseX<=width && mouseX>=cerx && mouseY<=height-cery && mouseY>=height) {
-        image(dpan, 0, 0, displayWidth, displayHeight);
+      if (vfce==true && mouseX<=width && mouseX>=cerx && mouseY>=cery && mouseY<=height) {
+        lose();
       }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
@@ -268,8 +268,8 @@ void liu(Teacher t, PImage disappoint, Player p, String words) {
       textAlign(CORNER);
       fill(255);
       text("Continue...", cerx+20, cery+60); 
-      if (keyPressed && key== 'C' && fce==true && mouseX<=width && mouseX>=cerx && mouseY<=height-cery && mouseY>=height) {
-        image(dpan, 0, 0, displayWidth, displayHeight);
+      if (lfce==true && mouseX<=width && mouseX>=width-cerx && mouseY>=cery && mouseY<=height) {
+        lose();
       }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;
@@ -295,8 +295,8 @@ void pollo(Teacher t, PImage disappoint, Player p, String words) {
       textAlign(CORNER);
       fill(255);
       text("Continue...", cerx+20, cery+60); 
-      if (keyPressed && key== 'C' && fce==true && mouseX<=width && mouseX>=cerx && mouseY<=height-cery && mouseY>=height) {
-        image(dpan, 0, 0, displayWidth, displayHeight);
+      if (polfce==true && mouseX<=width && mouseX>=cerx && mouseY>=cery && mouseY<=height) {
+        lose();
       }
 //      p.loc.x=currentx;
 //      p.loc.y=currenty;

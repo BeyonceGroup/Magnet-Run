@@ -65,6 +65,7 @@ PImage ddr;
 PImage dmej;
 PImage dpin;
 PImage dlu;
+PImage troll;
 int a, b;
 float cx, cy, cw, ch;
 float vhall, hhall;
@@ -113,6 +114,7 @@ void setup() {
   dpin=loadImage("Pinto.JPG");
   mah=loadImage("Mahoney.JPG");
   sg= loadImage("sophie.png");
+  troll= loadImage("Troll.png");
   rx= width/2;
   ry=height/2;
   rw=225;

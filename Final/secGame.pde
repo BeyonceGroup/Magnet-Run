@@ -53,10 +53,11 @@ void secGame(Player p) {
   line(vhall, hhall*2, displayWidth-vhall, hhall*2);
   line(vhall, hhall*3, displayWidth-vhall, hhall*3);
   strokeWeight(1);
-  monroy(monroy, dmon, p, "I'm very disappointed in you");
-  drb(buch, ddr, p, "I'm very disappointed in you");
-  moskowitz(mosko, dmos, p, "I'm very disappointed in you");
-  pantaleo(pants, dpan, p, "I'm very disappointed in you");
+  textSize(10);
+  monroy(monroy, dmon, p, "Oh, you're leaving too?");
+  drb(buch, ddr, p, "Well, frankly, I can't understand why a Magned student would be running out of class in the first place. this is highly abnormal, but I suppose I'llhave to give you a LOP");
+  moskowitz(mosko, dmos, p, "Okay well... here's a LOP...");
+  pantaleo(pants, dpan, p, "If you were planning on getting past me, you really shouldn't have been moving with a constant velocity. The key is to accelerate when you're near teachers, mmkay?");
   mej(mejia, dmej, p, "I'm very disappointed in you");
   //  monroy.caught(dmon, p, "I'm very disappointed in you");
   //  buch.caught(ddr, p, "I'm very disappointed in you");

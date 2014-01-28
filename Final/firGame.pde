@@ -44,8 +44,9 @@ void firGame(Player p) {
   line(vhall, hhall*2, displayWidth-vhall, hhall*2);
   line(vhall, hhall*3, displayWidth-vhall, hhall*3);
   strokeWeight(1);
+  textSize(10);
   sansy(sansy, dsan, p, "I'm very disappointed in you");
-  arnold(arnold, darn, p, "I'm very disappointed in you");
+  arnold(arnold, darn, p, "It's not really smart to try and leave in the middle of the day. I mean, I don't want to be here either, but I know I have responsibilities. So yeah, here's a LOP");
   pinto(pinto, dpin, p, "I'm very disappointed in you");
   valley(valley, dval, p, "I'm very disappointed in you");
   liu(liu, dlu, p, "I'm very disappointed in you");
