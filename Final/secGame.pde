@@ -59,20 +59,5 @@ void secGame(Player p) {
   moskowitz(mosko, dmos, p, "Okay well... here's a LOP...");
   pantaleo(pants, dpan, p, "If you were planning on getting past me, you really shouldn't have been moving with a constant velocity. The key is to accelerate when you're near teachers, mmkay?");
   mej(mejia, dmej, p, "*Angry Spanish*");
-  //  monroy.caught(dmon, p, "I'm very disappointed in you");
-  //  buch.caught(ddr, p, "I'm very disappointed in you");
-  //  mosko.caught(dmos, p, "I'm very disappointed in you");
-  //  pants.caught(dpan, p, "I'm very disappointed in you");
-  //  mejia.caught(dmej, p, "I'm very disappointed in you");
-  //  caught(monroy, p);
-  //  talking1(dmon, p, "I'm very disappointed in you");
-  //  caught(buch, p);
-  //  talking1(ddr, p, "I'm very disappointed in you");
-  //  caught(pants, p);
-  //  talking1(dpan, p, "I'm very disappointed in you");
-  //  caught(mosko, p);
-  //  talking1(dmos, p, "I'm very disappointed in you");
-  //  caught(mejia, p);
-  //  talking1(dmej, p, "I'm very disappointed in you");
 }
 

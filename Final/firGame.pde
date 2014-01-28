@@ -3,6 +3,7 @@ void firGame(Player p) {
   image(floor, 0, 0, displayWidth, displayHeight);
   rectMode(CENTER);
   strokeWeight(5);
+  stroke(255);
   rectMode(CORNER);
   colorMode(HSB, 360, 100, 100);
   fill(h, 100, 100, 75);
@@ -36,7 +37,6 @@ void firGame(Player p) {
   pollo.show(pol);
   pollo.patrol_right();
   rectMode(CENTER);
-  stroke(255);
   fill(255, 180, 20);
   strokeWeight(5);
   rect(rx, ry, displayWidth-(vhall*2), displayHeight-(hhall*2));
