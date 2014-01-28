@@ -1,7 +1,6 @@
 void firGame(Player p) {
   imageMode(CORNER);
   image(floor, 0, 0, displayWidth, displayHeight);
-  rectMode(CENTER);
   strokeWeight(5);
   stroke(255);
   rectMode(CORNER);
