@@ -28,6 +28,24 @@ class Teacher {
   void show (PImage face) {
     image(face, loc.x, loc.y, d, d);
   }
+    void patrol_left () {
+    loc.x-=xSpeed;
+    if (loc.x <= 0-d/2 || loc.x >= inx) {
+      xSpeed=-xSpeed;
+    }
+  }
+  void patrol_right () {
+    loc.x+=xSpeed;
+    if (loc.x <= inx || loc.x >= displayWidth-d) {
+      xSpeed=-xSpeed;
+    }
+  }
+  void patrol_mejia () {
+    loc.y+=xSpeed;
+    if (loc.y <= 0 || loc.y >= hhall-d) {
+      xSpeed=-xSpeed;
+    }
+  }
 
   void caught (PImage disappoint, Player p, String words) {
     if (dist(loc.x, loc.y, p.loc.x, p.loc.y) < d/2+p.d/2) {
@@ -80,24 +98,7 @@ class Teacher {
   ////      image(face, width/2, d*2, d*2, d*2);
   //    }
   //  }
-  void patrol_left () {
-    loc.x-=xSpeed;
-    if (loc.x <= 0-d/2 || loc.x >= inx) {
-      xSpeed=-xSpeed;
-    }
-  }
-  void patrol_right () {
-    loc.x+=xSpeed;
-    if (loc.x <= inx || loc.x >= displayWidth-d) {
-      xSpeed=-xSpeed;
-    }
-  }
-  void patrol_mejia () {
-    loc.y+=xSpeed;
-    if (loc.y <= 0 || loc.y >= hhall-d) {
-      xSpeed=-xSpeed;
-    }
-  }
+
   //  void mousePressed() {
   //    if (fce==true && mouseX<=width && mouseX>=cerx && mouseY<=height-cery && mouseY>=height) {
   //      image(dpan, 0, 0, displayWidth, displayHeight);
