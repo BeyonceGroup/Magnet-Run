@@ -53,7 +53,6 @@ void secGame(Player p) {
   line(vhall, hhall*2, displayWidth-vhall, hhall*2);
   line(vhall, hhall*3, displayWidth-vhall, hhall*3);
   strokeWeight(1);
-  fill(0,255, 0);
   textSize(10);
   monroy(monroy, dmon, p, "Oh, you're leaving too?");
   drb(buch, ddr, p, "Well, frankly, I can't understand why a Magned student would be running out of class in the first place. this is highly abnormal, but I suppose I'llhave to give you a LOP.");
