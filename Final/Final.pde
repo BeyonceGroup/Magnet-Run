@@ -166,7 +166,11 @@ void setup() {
   pi=false;
   chicken=false;
   loo=false;
-  fce = false;
+  mfce=false;
+  bfce=false;
+  mosfce=false;
+  pfce=false;
+  mejfce=false;
   student = new Catcher();
 
   for (int i =0; i<amt; i++) {
