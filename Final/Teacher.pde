@@ -48,7 +48,7 @@ class Teacher {
   }
 
   void caught (PImage disappoint, Player p, String words) {
-    if (dist(loc.x, loc.y, p.loc.x, p.loc.y) < d/2+p.d/2) {
+    if (dist(loc.x, loc.y, p.loc.x, p.loc.y) <= d/2+p.d/2) {
       fce=true;
     }
     if (fce == true) {
